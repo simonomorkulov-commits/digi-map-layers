@@ -2,6 +2,8 @@
 
 Тестовое задание на React 19, TypeScript и **vedro 1.1.0**. Три независимых слоя: температура, ветер и инсоляция. Включение запускает mock API; доступны opacity, статусы `loading / success / error` и повторная загрузка после ошибки.
 
+**[Открыть работающий сайт](https://simonomorkulov-commits.github.io/digi-map-layers/)** — GitHub Pages, без установки и регистрации.
+
 ## Запуск
 
 Нужен Node.js 24 LTS и npm. Lockfile включён в репозиторий.
@@ -81,6 +83,8 @@ src/
 Vitest + Testing Library проверяют отмену, устаревшие успехи и ошибки, оба порядка ответов при off/on, очистку `finally`, сохранение opacity во время загрузки, независимые запросы, retry, границы opacity, размонтирование в StrictMode и изоляцию 120 подписчиков. Интеграционный тест проходит путь `loading → error → retry → success` через реальные элементы UI и mock API.
 
 GitHub Actions запускает `npm run check` для push и pull request.
+
+После успешных проверок push в `main` автоматически публикует `dist` на GitHub Pages. Сборка Vite использует base `/digi-map-layers/`, локальный режим разработки — `/`. В настройках репозитория Pages выбран источник GitHub Actions.
 
 ## Использование AI
 
